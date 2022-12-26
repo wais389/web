@@ -85,6 +85,7 @@ footer {
 
     background-image: url('../img/hero.jpg');
     background-size: cover;
+    background-color: #A8BABC;
 }
 
 .hero .hero__title {
@@ -206,6 +207,89 @@ footer {
     width: calc(33% - 13px);
 }
 
+.project--loading {
+    position: relative;
+}
+
+.project--loading::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: #fff;
+    animation: loading-bg 6s ease;
+}
+
+.project--loading::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    background-color: var(--cyan);
+    animation: rotating 2s ease infinite, loading-loader 6s ease;
+}
+
+
+@keyframes loading-bg {
+    0% {
+        z-index: 1;
+    }
+    90% {
+        z-index: 1;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes loading-loader {
+    0% {
+        z-index: 2;
+    }
+    90% {
+        z-index: 2;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes rotating {
+    25% {
+        transform: rotateY(180deg);
+    }
+    50% {
+        transform: rotateZ(180deg);
+        scale: 1.5;
+    }
+    75% {
+        transform: rotateX(180deg);
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+.project .project__preview {
+    object-fit: cover;
+}
+
+.project img {
+    max-width: 100%;
+}
+
 .project .project__content {
     background-color: #fff;
     text-align: center;
@@ -285,7 +369,8 @@ footer {
 .contacts {
     background-image: url('../img/contacts-bg.jpg');
     background-size: cover;
-}
+    background-color: #8CCAC5;
+} 
 
 .contacts .contacts__list {
     display: flex;
@@ -436,7 +521,7 @@ fieldset legend {
 }
 
 .form .form__input:required {
-    border-bottom: 1px solid red;
+    box-shadow: 0 2px 5px red;
 }
 
 .form .form__input--textarea {
@@ -464,4 +549,114 @@ fieldset legend {
 
 .pseudo-elements li:nth-child(2n + 1) {
     text-transform: uppercase;
+}
+
+.demo {
+    padding: 100px 0;
+}
+
+.demo .demo__gradients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.demo .demo__gradient {
+    height: 200px;
+    width: 200px;
+}
+
+.demo .demo__gradient--linear {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,110,1) 50%, rgba(0,212,255,1) 100%);
+}
+
+.demo .demo__gradient--radial {
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,121,110,1) 50%, rgba(0,212,255,1) 100%);
+}
+
+.demo .demo__gradient--conic {
+    border-radius: 50%;
+    background: conic-gradient(red, orange, yellow, green, cyan, blue, purple);
+}
+
+.demo .demo__animations {
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px var(--purple);
+    border-style: dotted;
+    padding: 10px;
+}
+
+.demo .demo__animation {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: var(--purple);
+    border: 2px solid #000;
+}
+
+.demo .demo__animations--2d .demo__animation--first {
+    animation: demoAnimation2D-first 3s ease-in-out infinite alternate;
+}
+
+.demo .demo__animations--2d .demo__animation--second {
+    animation: demoAnimation2D-second 3s ease-in-out infinite alternate;
+}
+
+.demo .demo__animations--3d .demo__animation--first {
+    animation: demoAnimation3D-first 3s ease-in-out infinite alternate;
+}
+
+.demo .demo__animations--3d .demo__animation--second {
+    animation: demoAnimation3D-second 3s ease-in-out infinite alternate;
+}
+
+.demo .demo__animations--transition:hover .demo__animation {
+    transform: translateX(100px);
+}
+
+.demo .demo__animations--transition .demo__animation--first {
+    transition: transform 1s ease-in-out;    
+}
+
+.demo .demo__animations--transition .demo__animation--second {
+    transition: transform 1s cubic-bezier(.29, 1.01, 1, -0.68);    
+}
+
+@keyframes demoAnimation2D-first {
+    from {
+        transform: translate(-100px, 0);
+    }
+    to {
+        transform: translate(100px, 0);
+    }
+}
+
+@keyframes demoAnimation2D-second {
+    from {
+        transform: translate(0, 100px);
+    }
+    to {
+        transform: translate(0, -100px);
+    }
+}
+
+@keyframes demoAnimation3D-first {
+    from {
+        transform: scale3d(0, 0, 0);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes demoAnimation3D-second {
+    from {
+        transform: rotate3d(0);
+    }
+    to {
+        transform: rotate3d(1, 1, 1, 90deg);
+    }
 }
