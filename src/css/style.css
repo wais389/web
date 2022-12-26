@@ -72,6 +72,10 @@ footer {
     gap: 35px;
 }
 
+.menu a:hover {
+    text-decoration: underline;
+}
+
 .hero {
     color: #fff;
 
@@ -127,11 +131,22 @@ footer {
     width: max-content;
     padding: 14px 35px 20px;
     cursor: pointer;
+    transition: background-color .5s ease, color .5s ease;
 }
 
 .button--blue {
     color: var(--cyan);
     border-color: var(--cyan);
+}
+
+.button:hover, .button:focus, .button:active {
+    background-color: var(--dark-gray);
+    color: #fff;
+}
+
+.button--blue:hover, .button--blue:focus, .button--blue:active {
+    background-color: var(--cyan);
+    color: #000;
 }
 
 .subtitle {
@@ -324,7 +339,11 @@ footer {
     padding: 0 30px;
 }
 
-.form .form__button {
+.form .form__input::placeholder {
+    opacity: 1;
+}
+
+.form .form__submit {
     margin: 20px auto 0;
 }
 
@@ -339,6 +358,8 @@ footer {
 
 .form .form__element {
     margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .form .form__line {
@@ -365,6 +386,7 @@ footer {
     background-color: var(--darkness);
     color: #fff;
     border: none;
+    margin: 20px auto 0;
 }
 
 fieldset {
@@ -385,4 +407,61 @@ fieldset legend {
     background-color: #000;
     padding: 30px;
     color: #fff;
+}
+
+::selection {
+    background-color: black;
+    color: white;
+}
+
+.form .form__input:focus ~ label {
+    color: cyan;
+}
+
+.form .form__row:nth-child(2n) {
+    opacity: .8;
+}
+
+.form .form__row:nth-child(2n + 1) {
+    opacity: .6;
+}
+
+.form .form__radio:checked ~ label {
+    color: cyan;
+}
+
+.form .form__button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.form .form__input:required {
+    border-bottom: 1px solid red;
+}
+
+.form .form__input--textarea {
+    padding: 30px;
+}
+
+.form dd {
+    margin-bottom: 10px;
+}
+
+.form dd::before {
+    content: "🛈";
+    margin-right: 5px;
+}
+
+.form dt::first-letter {
+    font-size: 24px;
+    color: var(--cyan);
+}
+
+.form .form__title {
+    color: var(--cyan);
+    margin-bottom: 10px;
+}
+
+.pseudo-elements li:nth-child(2n + 1) {
+    text-transform: uppercase;
 }

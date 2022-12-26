@@ -37,61 +37,181 @@
         </div>
     </header>
     <main>
-        <h1 hidden>Registration</h1>
         <section class="registration">
             <div class="wrapper">
-                <h2 hidden>Registration form</h2>
                 <form action="//httpbin.org/post" class="registration__form form" method="post">
                     <fieldset>
                         <legend>Личная информация</legend>
                         <div class="form__element">
-                            <label for="name" class="form__label">Имя:</label>
                             <input required type="text" name="name" id="name" class="form__input" placeholder="Иван">
+                            <label for="name" class="form__label">Имя:</label>
                         </div>
                         <div class="form__element">
-                            <label for="birthday" class="form__label">Дата рождения:</label>
                             <input required type="date" name="birthday" id="birthday" class="form__input">
+                            <label for="birthday" class="form__label">Дата рождения:</label>
                         </div>
                         <div class="form__element">
-                            <p>Пол:</p>
                             <div class="form__line">
                                 <div class="form__line">
-                                    <label for="sex-male" class="form__label">Мужский</label>
                                     <input checked type="radio" name="sex" value="male" id="sex-male" class="form__radio">
+                                    <label for="sex-male" class="form__label">Мужский</label>
                                 </div>
                                 <div class="form__line">
-                                    <label for="sex-female" class="form__label">Женский</label>
                                     <input type="radio" name="sex" value="female" id="sex-female" class="form__radio">
+                                    <label for="sex-female" class="form__label">Женский</label>
                                 </div>
                             </div>
+                            <p>Пол:</p>
                         </div>
                         <div class="form__element">
-                            <label for="password" class="form__label">Пароль:</label>
                             <input required type="password" name="password" id="password" class="form__input">
+                            <label for="password" class="form__label">Пароль:</label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Контактные данные</legend>
                         <div class="form__element">
-                            <label for="email" class="form__label">Email:</label>
                             <input required type="email" name="email" id="email" class="form__input" placeholder="ivan@gmail.com">
+                            <label for="email" class="form__label">Email:</label>
                         </div>
                         <div class="form__element">
-                            <label for="tel" class="form__label">Телефон:</label>
                             <input required type="tel" name="tel" id="tel" class="form__input" placeholder="79991234567">
+                            <label for="tel" class="form__label">Телефон:</label>
                         </div>
                         <div class="form__element">
-                            <label for="time" class="form__label">Интервал для связи</label>
                             <select name="time" id="time" class="form__input">
                                 <option value="morning" selected>Утро</option>
                                 <option value="daytime">День</option>
                                 <option value="evening">Вечер</option>
                                 <option value="night">Ночь</option>
                             </select>
+                            <label for="time" class="form__label">Интервал для связи</label>
                         </div>
                     </fieldset>
-                    <input type="reset" value="Сбросить" class="form__button">
+                    <input disabled type="reset" value="Сбросить" class="form__button">
                     <button type="submit" class="form__button">Отправить</button>
+                </form>
+                <form action="//httpbin.org/post" class="registration__form form" method="post">
+                    <div class="form__block">
+                        <dl class="form__list">
+                            <h3 class="form__title">Pseudo-classes</h3>
+                            <dt>root</dt>
+                            <dd>Corresponds to the element that is the root of the document.</dd>
+                            <dt>link</dt>
+                            <dd>Corresponds to unvisited links.</dd>
+                            <dt>visited</dt>
+                            <dd>Corresponds to the visited links.</dd>
+                            <dt>hover</dt>
+                            <dd>Corresponds to the element that the mouse cursor is hovering over.</dd>
+                            <dt>active</dt>
+                            <dd>It is suitable when the user activates (for example, clicks the mouse) an element.</dd>
+                            <dt>focus</dt>
+                            <dd>Corresponds to the element that has focus.</dd>
+                            <dt>Псевдоклассы группы child</dt>
+                            <dd>Corresponds to an element that is somehow among other child elements of the same ancestor.</dd>
+                            <dt>Псевдоклассы группы type</dt>
+                            <dd>Corresponds to an element that is of a certain type among other child elements of the same ancestor.</dd>
+                            <dt>checked</dt>
+                            <dd>Corresponds to a radio button or checkbox in the selected state.</dd>
+                            <dt>disabled, enabled</dt>
+                            <dd>Corresponds to user interface elements that are in the disabled/enabled state.</dd>
+                            <dt>required</dt>
+                            <dd>Corresponds to the mandatory element of the form.</dd>
+                        </dl>
+                        <dl class="form___list">
+                            <h3 class="form__title">Pseudo-elements</h3>
+                            <dt>first-letter</dt>
+                            <dd>Corresponds to the first letter of the element.</dd>
+                            <dt>first-line</dt>
+                            <dd>Corresponds to the first line of the content of the generating element.</dd>
+                            <dt>selection</dt>
+                            <dd>Corresponds to the part of the document that was selected.</dd>
+                            <dt>marker</dt>
+                            <dd>Corresponds to the marker field of the list item, which usually contains a bold dot or number.</dd>
+                            <dt>before</dt>
+                            <dd>Corresponds to an element that allows styling and appears before the current content of the generating element.</dd>
+                            <dt>after</dt>
+                            <dd>Corresponds to an element that allows styling and appears after the current content of the generating element.</dd>
+                        </dl>
+                    </div>
+                    <fieldset>
+                        <legend>Pseudo-classes</legend>
+                        <ul>
+                            <li>
+                                <input class="form__radio" type="checkbox" id="root" name="root" checked>
+                                <label class="form__label" for="root">root</label>
+                            </li>
+                            <li>
+                                <input class="form__radio" type="checkbox" id="link" name="link">
+                                <label class="form__label" for="link">link</label>
+                            </li>
+                            <li>
+                                <input class="form__radio" type="checkbox" id="visited" name="visited">
+                                <label class="form__label" for="visited">visited</label>
+                            </li>
+                            <li>
+                                <input class="form__radio" type="checkbox" id="hover" name="hover" checked>
+                                <label class="form__label" for="hover">hover</label>
+                            </li>
+                            <li>
+                                <input class="form__radio" type="checkbox" id="active" name="active" checked>
+                                <label class="form__label" for="active">active</label>
+                            </li>
+                            <li>
+                                <input class="form__radio" type="checkbox" id="focus" name="focus" checked>
+                                <label class="form__label" for="focus">focus</label>
+                            </li>
+                            <li>
+                                <input class="form__radio" type="checkbox" id="child" name="child" checked>
+                                <label class="form__label" for="child">Псевдоклассы группы child</label>
+                            </li>
+                            <li>
+                                <input class="form__radio" type="checkbox" id="type" name="type">
+                                <label class="form__label" for="type">Псевдоклассы группы type</label>
+                            </li>
+                            <li>
+                                <input class="form__radio" type="checkbox" id="checked" name="checked" checked>
+                                <label class="form__label" for="checked">checked</label>
+                            </li>
+                            <li>
+                                <input class="form__radio" type="checkbox" id="disabled" name="disabled" checked>
+                                <label class="form__label" for="disabled">disabled</label>
+                            </li>
+                            <li>
+                                <input class="form__radio" type="checkbox" id="required" name="required" checked>
+                                <label class="form__label" for="required">required</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>   
+                        <legend>Pseudo-elements</legend>
+                        <ul class="pseudo-elements">
+                            <li class="form__check-row">
+                                <input class="form__radio" type="checkbox" id="first-letter" name="first-letter" checked>
+                                <label class="form__label" for="first-letter">first-letter</label>
+                            </li>
+                            <li class="form__check-row">
+                                <input class="form__radio" type="checkbox" id="first-line" name="first-line">
+                                <label class="form__label" for="first-line">first-line</label>
+                            </li>
+                            <li class="form__check-row">
+                                <input class="form__radio" type="checkbox" id="selection" name="selection" checked>
+                                <label class="form__label" for="selection">selection</label>
+                            </li>
+                            <li class="form__check-row">
+                                <input class="form__radio" type="checkbox" id="marker" name="marker">
+                                <label class="form__label" for="marker">marker</label>
+                            </li>
+                            <li class="form__check-row">
+                                <input class="form__radio" type="checkbox" id="before" name="before" checked>
+                                <label class="form__label" for="before">before</label>
+                            </li>
+                            <li class="form__check-row">
+                                <input class="form__radio" type="checkbox" id="after" name="after">
+                                <label class="form__label" for="after">after</label>
+                            </li>
+                        </ul>
+                    </fieldset>
                 </form>
             </div>
         </section>
@@ -99,14 +219,22 @@
     <footer class="footer">
         <div class="wrapper">
             <form action="#" class="form">
-                <label for="username" hidden>Name</label>
-                <input class="form__input" type="text" id="username" name="username" placeholder="Name">
-                <label for="mail" hidden>Email</label>
-                <input class="form__input" type="email" id="mail" name="mail" placeholder="Email">
-                <label for="budget" hidden>Budget</label>
-                <input class="form__input" type="text" id="budget" name="budget" placeholder="Budget">
-                <label for="description" hidden>Description</label>
-                <textarea class="form__input" name="description" id="description" placeholder="Describe your project.."></textarea>
+                <div class="form__row">
+                    <label for="username" hidden>Name</label>
+                    <input class="form__input" type="text" id="username" name="username" placeholder="Name">
+                </div>
+                <div class="form__row">
+                    <label for="mail" hidden>Email</label>
+                    <input class="form__input" type="email" id="mail" name="mail" placeholder="Email">
+                </div>
+                <div class="form__row">
+                    <label for="budget" hidden>Budget</label>
+                    <input class="form__input" type="text" id="budget" name="budget" placeholder="Budget">
+                </div>
+                <div class="form__row">
+                    <label for="description" hidden>Description</label>
+                    <textarea class="form__input form__input--textarea" name="description" id="description" placeholder="Describe your project.."></textarea>
+                </div>
                 <button type="submit" class="form__button button button--blue">Send Message</button>
             </form>
             <div>
