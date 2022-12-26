@@ -1,0 +1,68 @@
+{
+    "name": "basic-layout-for-first-course",
+    "version": "1.0.0",
+    "prettier": "prettier-airbnb-config",
+    "private": false,
+    "description": "Сборщик, подготовленный для выполнения лабораторных работ первого курса",
+    "scripts": {
+        "test": "npx eslint . --ext .js",
+        "build": "webpack --mode production",
+        "start": "webpack-dev-server --progress --hot",
+        "prepare": "husky install",
+        "prettier": "prettier --write src/**/*.{scss,html}",
+        "htmlhint": "htmlhint src/**/*.html",
+        "stylelint": "stylelint src/css",
+        "stylelint:fix": "npm run stylelint -- --fix",
+        "eslint": "eslint src/js/**/*.js",
+        "eslint:fix": "npm run eslint -- --fix",
+        "fix": "npm run eslint:fix && npm run prettier && npm run stylelint:fix",
+        "lint": "npm run eslint && npm run htmlhint && npm run stylelint"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "pre-push": "npm run lint"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.js": [
+            "npm run eslint"
+        ],
+        "src/**/*.css": [
+            "npm run stylelint"
+        ],
+        "src/**/*.html": [
+            "npm run htmlhint"
+        ]
+    },
+    "devDependencies": {
+        "@babel/preset-env": "7.19.1",
+        "babel-loader": "8.2.5",
+        "copy-webpack-plugin": "11.0.0",
+        "css-loader": "6.7.1",
+        "css-minimizer-webpack-plugin": "4.1.0",
+        "eslint": "^8.23.1",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "html-loader": "4.1.0",
+        "html-webpack-plugin": "5.5.0",
+        "htmlhint": "^1.1.4",
+        "husky": "^8.0.0",
+        "mini-css-extract-plugin": "2.6.1",
+        "pre-commit": "^1.2.2",
+        "prettier": "^1.19.1",
+        "prettier-airbnb-config": "^1.0.0",
+        "string-replace-loader": "^3.1.0",
+        "stylelint-config-airbnb": "0.0.0",
+        "webpack": "5.74.0",
+        "webpack-cli": "4.10.0",
+        "webpack-dev-server": "4.11.1"
+    },
+    "engines": {
+        "node": "16"
+    },
+    "dependencies": {
+        "style-loader": "3.3.1"
+    }
+}
