@@ -6,7 +6,7 @@
     --dark-gray: #47474F;
     --black: #212121;
     --gray: #ABABAB;
-    --cream: #FEFEC9;
+    --cream: #FEFEC9; 
     --smoke: #F5F5F5;
     --cyan: #8BCAC3;
 }
@@ -67,6 +67,9 @@ body {
     padding: 100px 0;
     position: relative;
     text-align: center;
+
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
 }
 
 .hero .hero__title {
@@ -253,6 +256,11 @@ body {
     margin-top: 10px;
 }
 
+.contacts {
+    background-image: url('../img/contacts-bg.jpg');
+    background-size: cover;
+}
+
 .contacts .contacts__list {
     display: flex;
 }
@@ -261,6 +269,10 @@ body {
     text-align: center;
     color: var(--black);
     width: 33%;
+}
+
+.contact .contact__image {
+    height: 65px;
 }
 
 .contact .contact__title {
