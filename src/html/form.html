@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reseter.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="minimal logo">
+                Minimal
+            </a>
+            <nav> 
+                <ul class="menu">
+                    <li>
+                        <a href="#">Process</a>
+                    </li>
+                    <li>
+                        <a href="#">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#">Team</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="form.html">Form</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1 hidden>Registration</h1>
+        <section class="registration">
+            <div class="wrapper">
+                <h2 hidden>Registration form</h2>
+                <form action="//httpbin.org/post" class="registration__form form" method="post">
+                    <fieldset>
+                        <legend>Личная информация</legend>
+                        <div class="form__element">
+                            <label for="name" class="form__label">Имя:</label>
+                            <input required type="text" name="name" id="name" class="form__input" placeholder="Иван">
+                        </div>
+                        <div class="form__element">
+                            <label for="birthday" class="form__label">Дата рождения:</label>
+                            <input required type="date" name="birthday" id="birthday" class="form__input">
+                        </div>
+                        <div class="form__element">
+                            <p>Пол:</p>
+                            <div class="form__line">
+                                <div class="form__line">
+                                    <label for="sex-male" class="form__label">Мужский</label>
+                                    <input checked type="radio" name="sex" value="male" id="sex-male" class="form__radio">
+                                </div>
+                                <div class="form__line">
+                                    <label for="sex-female" class="form__label">Женский</label>
+                                    <input type="radio" name="sex" value="female" id="sex-female" class="form__radio">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__element">
+                            <label for="password" class="form__label">Пароль:</label>
+                            <input required type="password" name="password" id="password" class="form__input">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Контактные данные</legend>
+                        <div class="form__element">
+                            <label for="email" class="form__label">Email:</label>
+                            <input required type="email" name="email" id="email" class="form__input" placeholder="ivan@gmail.com">
+                        </div>
+                        <div class="form__element">
+                            <label for="tel" class="form__label">Телефон:</label>
+                            <input required type="tel" name="tel" id="tel" class="form__input" placeholder="79991234567">
+                        </div>
+                        <div class="form__element">
+                            <label for="time" class="form__label">Интервал для связи</label>
+                            <select name="time" id="time" class="form__input">
+                                <option value="morning" selected>Утро</option>
+                                <option value="daytime">День</option>
+                                <option value="evening">Вечер</option>
+                                <option value="night">Ночь</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <input type="reset" value="Сбросить" class="form__button">
+                    <button type="submit" class="form__button">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <form action="#" class="form">
+                <label for="username" hidden>Name</label>
+                <input class="form__input" type="text" id="username" name="username" placeholder="Name">
+                <label for="mail" hidden>Email</label>
+                <input class="form__input" type="email" id="mail" name="mail" placeholder="Email">
+                <label for="budget" hidden>Budget</label>
+                <input class="form__input" type="text" id="budget" name="budget" placeholder="Budget">
+                <label for="description" hidden>Description</label>
+                <textarea class="form__input" name="description" id="description" placeholder="Describe your project.."></textarea>
+                <button type="submit" class="form__button button button--blue">Send Message</button>
+            </form>
+            <div>
+                <a href="/"><img src="img/logo-white.png" alt="minimal logo"></a>
+                <p class="footer__text">Minimal Template made in Webflow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

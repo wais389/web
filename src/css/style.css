@@ -22,6 +22,17 @@ p {
 body {
     font-family: 'Vollkorn', serif;
     color: var(--darkness);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    flex-shrink: 1;
 }
 
 .wrapper {
@@ -319,4 +330,59 @@ body {
 
 .form textarea.form__input {
     height: 130px;
+}
+
+.form .form__label {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.form .form__element {
+    margin-bottom: 25px;
+}
+
+.form .form__line {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.form .form__line .form__label {
+    margin-bottom: 0;
+}
+
+.form .form__radio {
+    height: 20px;
+    width: 20px;
+}
+
+.form .form__button {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--darkness);
+    color: #fff;
+    border: none;
+}
+
+fieldset {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+fieldset legend {
+    margin-bottom: 10px;
+}
+
+.registration {
+    background-color: var(--smoke);
+    padding: 60px 0;
+}
+
+.registration .registration__form {
+    background-color: #000;
+    padding: 30px;
+    color: #fff;
 }
