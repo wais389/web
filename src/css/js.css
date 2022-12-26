@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+.basket {
+    position: relative;
+    width: max-content;
+}
+
+.basket .counter {
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+}
+
+.add {
+    margin-top: 20px;
+    display: block;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    background-color: red;
+    font-size: 30px;
+    font-family: monospace;
+    color: white;
+    position: fixed;
+    border-radius: 40px;
+    bottom: calc(50% - 100px);
+    right: calc(50% - 200px);
+    transition: scale .5s ease;
+}
+
+.modal#error {
+    right: 50px;
+    bottom: 50px;
+    width: 200px;
+    height: 100px;
+
+    animation: error 1s ease infinite;
+}
+
+@keyframes error {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.2;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+.modal.closed {
+    scale: 0!important;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card {
+    margin-top: 20px;
+    cursor: pointer;
+    border: 3px solid red;
+    width: max-content;
+    padding: 3px;
+}
+
+.content {
+    height: 200px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    background-color: red;;
+    transition: transform .5s ease;
+}
