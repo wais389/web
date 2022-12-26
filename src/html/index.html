@@ -35,6 +35,9 @@
                     <li>
                         <a href="demo.html">Demo</a>
                     </li>
+                    <li>
+                        <a href="#" id="registration">Registration</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -396,14 +399,22 @@
     <footer class="footer">
         <div class="wrapper">
             <form action="#" class="form">
-                <label for="name" hidden>Name</label>
-                <input class="form__input" type="text" id="name" name="name" placeholder="Name">
-                <label for="email" hidden>Email</label>
-                <input class="form__input" type="email" id="email" name="email" placeholder="Email">
-                <label for="budget" hidden>Budget</label>
-                <input class="form__input" type="text" id="budget" name="budget" placeholder="Budget">
-                <label for="description" hidden>Description</label>
-                <textarea class="form__input" name="description" id="description" placeholder="Describe your project.."></textarea>
+                <div class="form__row">
+                    <label for="username" hidden>Name</label>
+                    <input class="form__input" type="text" id="username" name="username" placeholder="Name">
+                </div>
+                <div class="form__row">
+                    <label for="mail" hidden>Email</label>
+                    <input class="form__input" type="email" id="mail" name="mail" placeholder="Email">
+                </div>
+                <div class="form__row">
+                    <label for="budget" hidden>Budget</label>
+                    <input class="form__input" type="text" id="budget" name="budget" placeholder="Budget">
+                </div>
+                <div class="form__row">
+                    <label for="description" hidden>Description</label>
+                    <textarea class="form__input form__input--textarea" name="description" id="description" placeholder="Describe your project.."></textarea>
+                </div>
                 <button type="submit" class="form__button button button--blue">Send Message</button>
             </form>
             <div>
@@ -412,5 +423,31 @@
             </div>
         </div>
     </footer>
+    <div class="modal modal-close">
+        <form action="#" class="modal__form form" method="post">
+            <span class="modal__close modal-close">
+                x
+            </span>
+            <p class="form__error" id="error"></p>
+            <div class="form__element">
+                <input required type="text" name="name" id="name" class="form__input" placeholder="Иван" minlength="2" pattern="[a-zA-Zа-яА-Я]+">
+                <label for="name" class="form__label">Имя:</label>
+            </div>
+            <div class="form__element">
+                <input required type="email" name="email" id="email" class="form__input" placeholder="ivan@gmail.com">
+                <label for="email" class="form__label">Email:</label>
+            </div>
+            <div class="form__element">
+                <input required minlength="6" type="password" name="password" id="password" class="form__input">
+                <label for="password" class="form__label">Пароль:</label>
+            </div>
+            <button type="button" id="show" class="form__button">Показать пароль</button>
+            <button type="submit" class="form__button">Отправить</button>
+        </form>
+    </div>
+    <div class="notify">
+        Форма успешно отправлена.
+    </div>
+    <script src="js/registration.js"></script>
 </body>
 </html>
