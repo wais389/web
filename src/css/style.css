@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&family=Vollkorn:ital@0;1&display=swap');
+
+:root {
+    --dark: #404040;
+    --darkness: #333333;
+    --dark-gray: #47474F;
+    --black: #212121;
+    --gray: #ABABAB;
+    --cream: #FEFEC9;
+    --smoke: #F5F5F5;
+    --cyan: #8BCAC3;
+}
+
+body {
+    font-family: 'Vollkorn', serif;
+    color: var(--darkness);
+}
+
+.logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.menu {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+.hero {
+    color: #fff;
+}
+
+.hero .hero__title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 44px;
+    line-height: 55px;
+}
+
+.line {
+    background-color: var(--cream);
+}
+
+.line .line__text {
+    font-size: 18px;
+    color: var(--dark-gray);
+    text-align: center;
+    line-height: 25px;
+}
+
+.button {
+    color: var(--dark-gray);
+    border: 1px solid var(--dark-gray);
+    border-bottom-width: 2px;
+    background-color: transparent;
+}
+
+.button--blue {
+    color: var(--cyan);
+    border-color: var(--cyan);
+}
+
+.subtitle {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.step {
+    text-align: center;
+}
+
+.step .step__block {
+    background-color: var(--smoke);
+}
+
+.step .step__name {
+    text-transform: uppercase;
+}
+
+.step .step__text {
+    font-size: 15px;
+}
+
+.projects {
+    background-color: var(--smoke);
+}
+
+.project .project__content {
+    background-color: #fff;
+    text-align: center;
+}
+
+.project .project__title {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.project .project__text {
+    font-size: 14px;
+}
+
+.employee {
+    text-align: center;
+}
+
+.employee .employee__name {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.employee .employee__post {
+    font-size: 14px;
+}
+
+.reviews {
+    background-color: var(--smoke);
+}
+
+.review {
+    text-align: center;
+}
+
+.review .review__text {
+    font-size: 26px;
+}
+
+.review .review__author {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.contact {
+    text-align: center;
+    color: var(--black);
+}
+
+.contact .contact__title {
+    color: var(--darkness);
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.footer {
+    background-color: #000;
+}
+
+.footer .footer__text {
+    color: rgba(255, 255, 255, .4);
+}
+
+.form .form__input {
+    background-color: var(--darkness);
+    color: #fff;
+    border: none;
+    outline: none;
+}
