@@ -32,12 +32,23 @@ body {
 
 .header {
     height: 100px;
+    padding: 20px 0;
+}
+
+.header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
     font-family: 'Oswald', sans-serif;
     font-size: 22px;
     text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .menu {
@@ -45,6 +56,9 @@ body {
     font-size: 12px;
     text-transform: uppercase;
     color: var(--dark);
+    
+    display: flex;
+    gap: 35px;
 }
 
 .hero {
@@ -123,6 +137,11 @@ body {
     padding: 70px 0;
 }
 
+.steps .steps__list {
+    display: flex;
+    justify-content: space-between;
+}
+
 .step {
     text-align: center;
     width: calc(33% - 13px);
@@ -147,6 +166,13 @@ body {
     background-color: var(--smoke);
 }
 
+.projects .projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
 .project {
     width: calc(33% - 13px);
 }
@@ -168,6 +194,11 @@ body {
     font-size: 14px;
 }
 
+.team .team__list {
+    display: flex;
+    justify-content: space-between;
+}
+
 .employee {
     text-align: center;
     width: calc(25% - 15px);
@@ -184,12 +215,24 @@ body {
     margin: 5px 0 20px;
 }
 
+.employee .employee__socials {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    gap: 20px;
+}
+
 .reviews {
     background-color: var(--smoke);
 }
 
 .reviews .delimeter {
     margin-top: 0;
+}
+
+.reviews .reviews__list {
+    display: flex;
+    justify-content: space-around;
 }
 
 .review {
@@ -208,6 +251,10 @@ body {
     font-size: 14px;
     color: var(--gray);
     margin-top: 10px;
+}
+
+.contacts .contacts__list {
+    display: flex;
 }
 
 .contact {
