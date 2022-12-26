@@ -11,9 +11,27 @@
     --cyan: #8BCAC3;
 }
 
+ul {
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
 body {
     font-family: 'Vollkorn', serif;
     color: var(--darkness);
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 940px;
+    width: 100%;
+}
+
+.header {
+    height: 100px;
 }
 
 .logo {
@@ -31,25 +49,45 @@ body {
 
 .hero {
     color: #fff;
+
+    padding: 100px 0;
+    position: relative;
+    text-align: center;
 }
 
 .hero .hero__title {
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
+    font-weight: 400;
     text-transform: uppercase;
     font-size: 44px;
     line-height: 55px;
+    margin-bottom: 30px;
+}
+
+.hero .hero__text {
+    margin-top: 25px;
+}
+
+.hero .hero__cross {
+    position: absolute;
+    bottom: -26px;
+    left: calc(50% - 26px);
 }
 
 .line {
     background-color: var(--cream);
+    padding: 60px 0;
+    text-align: center;
 }
 
 .line .line__text {
     font-size: 18px;
     color: var(--dark-gray);
-    text-align: center;
     line-height: 25px;
+}
+
+.line .line__button {
+    margin: 40px auto 0;
 }
 
 .button {
@@ -57,6 +95,10 @@ body {
     border: 1px solid var(--dark-gray);
     border-bottom-width: 2px;
     background-color: transparent;
+    display: block;
+    width: max-content;
+    padding: 14px 35px 20px;
+    cursor: pointer;
 }
 
 .button--blue {
@@ -72,16 +114,29 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.delimeter {
+    display: block;
+    margin: 30px auto 40px;
+}
+
+.steps, .projects, .team, .reviews, .contacts, .footer {
+    padding: 70px 0;
+}
+
 .step {
     text-align: center;
+    width: calc(33% - 13px);
 }
 
 .step .step__block {
     background-color: var(--smoke);
+    padding: 50px 0;
 }
 
 .step .step__name {
     text-transform: uppercase;
+    font-weight: 400;
+    margin: 40px 0 20px;
 }
 
 .step .step__text {
@@ -92,14 +147,21 @@ body {
     background-color: var(--smoke);
 }
 
+.project {
+    width: calc(33% - 13px);
+}
+
 .project .project__content {
     background-color: #fff;
     text-align: center;
+    padding: 20px 0;
 }
 
 .project .project__title {
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-bottom: 5px;
 }
 
 .project .project__text {
@@ -108,27 +170,36 @@ body {
 
 .employee {
     text-align: center;
+    width: calc(25% - 15px);
 }
 
 .employee .employee__name {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    margin-top: 20px;
 }
 
 .employee .employee__post {
     font-size: 14px;
+    margin: 5px 0 20px;
 }
 
 .reviews {
     background-color: var(--smoke);
 }
 
+.reviews .delimeter {
+    margin-top: 0;
+}
+
 .review {
     text-align: center;
+    width: calc(50% - 100px);
 }
 
 .review .review__text {
     font-size: 26px;
+    margin-bottom: 25px;
 }
 
 .review .review__author {
@@ -136,11 +207,13 @@ body {
     text-transform: uppercase;
     font-size: 14px;
     color: var(--gray);
+    margin-top: 10px;
 }
 
 .contact {
     text-align: center;
     color: var(--black);
+    width: 33%;
 }
 
 .contact .contact__title {
@@ -149,19 +222,42 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 17px;
     font-weight: 400;
+    margin: 25px 0 20px;
+}
+
+.contact .contact__link {
+    margin-bottom: 10px;
 }
 
 .footer {
     background-color: #000;
+    text-align: center;
 }
 
 .footer .footer__text {
     color: rgba(255, 255, 255, .4);
+    margin-top: 15px;
+}
+
+.form {
+    width: 550px;
+    margin: 0 auto 40px;
 }
 
 .form .form__input {
     background-color: var(--darkness);
+    width: 100%;
     color: #fff;
     border: none;
     outline: none;
+    height: 60px;
+    padding: 0 30px;
+}
+
+.form .form__button {
+    margin: 20px auto 0;
+}
+
+.form textarea.form__input {
+    height: 130px;
 }
