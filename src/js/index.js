@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable eqeqeq */
 /* eslint-disable no-plusplus */
 /* eslint-disable radix */
 /* eslint-disable no-undef */
@@ -61,7 +62,7 @@ console.log(str);
 const r = 6;
 let N = prompt('Угадайте число');
 
-while (N !== r) {
+while (N != r) {
   if (N > r) console.log('ваше число больше');
   else console.log('ваше число меньше');
   N = prompt('Угадайте число');
